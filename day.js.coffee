@@ -10,7 +10,7 @@ FunSchedular.Day = Ember.ArrayProxy.extend
     if moment.isMoment(@get('date'))
       date = @get('date')
     else
-      date = moment(@get('date'), "YYYY-MM-DD")
+      date = moment(@get('date'))
     @set('today', true) if moment(date).format("YYYY-MM-DD") == moment().format("YYYY-MM-DD")
     @set('moment', date)
     @set('content', Ember.A([]))
